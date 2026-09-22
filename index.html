@@ -10,32 +10,48 @@
     <div class="container">
         <header>
             <h1>Student Management System</h1>
-            <p>🚀 Tech Titans Hackathon Project (Linear Data Structure Framework)</p>
+            <p>⚡ Tech Titans Hackathon Project — Linear Data Structure Engine</p>
         </header>
 
-        <div class="dashboard-stats">
-            <div class="stat-card">
-                <h3>Total Enrolled Records</h3>
+        <!-- Metrics Dashboard -->
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <h4>Total Records (ArrayList)</h4>
                 <span id="totalCount">0</span>
+            </div>
+            <div class="metric-card">
+                <h4>Class Average Marks</h4>
+                <span id="avgMarks">0.0%</span>
+            </div>
+            <div class="metric-card">
+                <h4>Top Performer</h4>
+                <span id="topStudent" style="font-size: 18px;">None</span>
             </div>
         </div>
 
-        <div class="card form-card">
-            <h2>➕ Add New Student Record</h2>
+        <!-- Add Form -->
+        <div class="card">
+            <h2>➕ Insert Node into Linear Memory</h2>
             <form id="studentForm">
                 <input type="number" id="studentId" placeholder="Student ID (e.g., 101)" required>
                 <input type="text" id="studentName" placeholder="Full Name" required>
                 <input type="text" id="studentDept" placeholder="Department (e.g., CSE)" required>
-                <input type="number" id="studentMarks" placeholder="Academic Marks (%)" step="0.01" min="0" max="100" required>
-                <button type="submit" class="btn-primary">Insert Record into Memory (ArrayList)</button>
+                <input type="number" id="studentMarks" placeholder="Marks Percentage (%)" step="0.01" min="0" max="100" required>
+                <button type="submit" class="btn-primary">Execute ArrayList.add() Operation</button>
             </form>
         </div>
 
-        <div class="card list-card">
-            <div class="list-header">
-                <h2>📋 Active Student Database</h2>
-                <button onclick="clearSystem()" class="btn-danger">Clear All Records</button>
+        <!-- Database View & Toolbar -->
+        <div class="card">
+            <div class="toolbar">
+                <input type="text" id="searchInput" class="search-box" placeholder="🔍 Search records by name or ID..." onkeyup="filterStudents()">
+                <div class="btn-group">
+                    <button onclick="sortById()" class="btn-secondary">Sort by ID</button>
+                    <button onclick="sortByMarks()" class="btn-secondary">Sort by Marks</button>
+                    <button onclick="clearSystem()" class="btn-danger">Clear All</button>
+                </div>
             </div>
+
             <div class="table-responsive">
                 <table>
                     <thead>
@@ -48,9 +64,17 @@
                         </tr>
                     </thead>
                     <tbody id="studentTableBody">
-                        <!-- Dynamic rows injected here -->
+                        <!-- Data injected dynamically -->
                     </tbody>
                 </table>
+            </div>
+        </div>
+
+        <!-- Data Structure Execution Log -->
+        <div class="card">
+            <h2>💻 Linear Data Structure Activity Terminal</h2>
+            <div id="terminalLog" class="terminal-box">
+                <div class="terminal-line log-success">[SYSTEM] Initialized ArrayList memory structure successfully. O(1) indexed access ready.</div>
             </div>
         </div>
     </div>
