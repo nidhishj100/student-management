@@ -10,24 +10,31 @@
     <div class="container">
         <header>
             <h1>Student Management System</h1>
-            <p>Tech Titans Hackathon Project (Linear Data Structure Prototype)</p>
+            <p>🚀 Tech Titans Hackathon Project (Linear Data Structure Framework)</p>
         </header>
 
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <h3>Total Enrolled Records</h3>
+                <span id="totalCount">0</span>
+            </div>
+        </div>
+
         <div class="card form-card">
-            <h2>Add New Student Record</h2>
+            <h2>➕ Add New Student Record</h2>
             <form id="studentForm">
-                <input type="number" id="studentId" placeholder="Student ID" required>
+                <input type="number" id="studentId" placeholder="Student ID (e.g., 101)" required>
                 <input type="text" id="studentName" placeholder="Full Name" required>
-                <input type="text" id="studentDept" placeholder="Department" required>
-                <input type="number" id="studentMarks" placeholder="Marks" step="0.01" required>
-                <button type="submit" class="btn-primary">Add Record (Push)</button>
+                <input type="text" id="studentDept" placeholder="Department (e.g., CSE)" required>
+                <input type="number" id="studentMarks" placeholder="Academic Marks (%)" step="0.01" min="0" max="100" required>
+                <button type="submit" class="btn-primary">Insert Record into Memory (ArrayList)</button>
             </form>
         </div>
 
         <div class="card list-card">
             <div class="list-header">
-                <h2>Student Records List</h2>
-                <button onclick="clearSystem()" class="btn-danger">Clear All</button>
+                <h2>📋 Active Student Database</h2>
+                <button onclick="clearSystem()" class="btn-danger">Clear All Records</button>
             </div>
             <div class="table-responsive">
                 <table>
@@ -41,7 +48,7 @@
                         </tr>
                     </thead>
                     <tbody id="studentTableBody">
-                        <!-- Dynamic rows appear here -->
+                        <!-- Dynamic rows injected here -->
                     </tbody>
                 </table>
             </div>
