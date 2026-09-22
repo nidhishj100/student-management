@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System | Tech Titans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Management System</h1>
+            <p>Tech Titans Hackathon Project (Linear Data Structure Prototype)</p>
+        </header>
+
+        <div class="card form-card">
+            <h2>Add New Student Record</h2>
+            <form id="studentForm">
+                <input type="number" id="studentId" placeholder="Student ID" required>
+                <input type="text" id="studentName" placeholder="Full Name" required>
+                <input type="text" id="studentDept" placeholder="Department" required>
+                <input type="number" id="studentMarks" placeholder="Marks" step="0.01" required>
+                <button type="submit" class="btn-primary">Add Record (Push)</button>
+            </form>
+        </div>
+
+        <div class="card list-card">
+            <div class="list-header">
+                <h2>Student Records List</h2>
+                <button onclick="clearSystem()" class="btn-danger">Clear All</button>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Marks</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody">
+                        <!-- Dynamic rows appear here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
