@@ -7,10 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <div class="nav-brand">🎓 Tech Titans - SMS</div>
+        <div class="nav-links">
+            <a href="#dashboard">Dashboard</a>
+            <a href="#form-section">Add Record</a>
+            <a href="#database-section">Database</a>
+            <a href="#terminal-section">Terminal</a>
+            <a href="#team-section">Team Info</a>
+        </div>
+    </nav>
+
+    <div class="container" id="dashboard">
         <header>
             <h1>Student Management System</h1>
-            <p>⚡ Tech Titans Hackathon Project — Linear Data Structure Engine</p>
+            <p>⚡ Dhanalakshmi Srinivasan College of Engineering — Linear Data Structure Engine</p>
         </header>
 
         <!-- Metrics Dashboard -->
@@ -25,12 +37,12 @@
             </div>
             <div class="metric-card">
                 <h4>Top Performer</h4>
-                <span id="topStudent" style="font-size: 18px;">None</span>
+                <span id="topStudent" style="font-size: 16px;">None</span>
             </div>
         </div>
 
         <!-- Add Form -->
-        <div class="card">
+        <div class="card" id="form-section">
             <h2>➕ Insert Node into Linear Memory</h2>
             <form id="studentForm">
                 <input type="number" id="studentId" placeholder="Student ID (e.g., 101)" required>
@@ -42,7 +54,7 @@
         </div>
 
         <!-- Database View & Toolbar -->
-        <div class="card">
+        <div class="card" id="database-section">
             <div class="toolbar">
                 <input type="text" id="searchInput" class="search-box" placeholder="🔍 Search records by name or ID..." onkeyup="filterStudents()">
                 <div class="btn-group">
@@ -71,13 +83,40 @@
         </div>
 
         <!-- Data Structure Execution Log -->
-        <div class="card">
+        <div class="card" id="terminal-section">
             <h2>💻 Linear Data Structure Activity Terminal</h2>
             <div id="terminalLog" class="terminal-box">
                 <div class="terminal-line log-success">[SYSTEM] Initialized ArrayList memory structure successfully. O(1) indexed access ready.</div>
             </div>
         </div>
+
+        <!-- Team & Credentials Section -->
+        <div class="card team-card" id="team-section">
+            <h2>🏆 Project Team & Institutional Credentials</h2>
+            <div class="team-grid">
+                <div class="team-col">
+                    <p><strong>Team Name:</strong> Tech Titans</p>
+                    <p><strong>Team Leader:</strong> Ajsal[cite: 1]</p>
+                    <p><strong>Project Developer:</strong> Nidhish J</p>
+                </div>
+                <div class="team-col">
+                    <p><strong>Assistant Developers / Members:</strong></p>
+                    <p class="members-list">Mohamed S, Gowtham Krishna G, Haleel Marakkar, Sajmin, Shaheer, Razal, Sachin[cite: 1]</p>
+                </div>
+                <div class="team-col">
+                    <p><strong>Institution:</strong> Dhanalakshmi Srinivasan College of Engineering[cite: 1]</p>
+                    <p><strong>Batch:</strong> 2028[cite: 1] | <strong>Semester:</strong> Sem 5[cite: 1]</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- Official Copyright Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Tech Titans (Dhanalakshmi Srinivasan College of Engineering). All Rights Reserved.</p>
+        <p>Approved Hackathon Prototype — Powered by Java Linear Data Structures & Web Architecture.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
